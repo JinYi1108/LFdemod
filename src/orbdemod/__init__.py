@@ -1,16 +1,30 @@
 from .logging_config import enable_logging
 
 from .ddc import (
-    digital_down_converter,
+    DecimationStageConfig,
+    FilterResponseReport,
+    design_butterworth_lowpass,
+    design_kaiser_lowpass,
+    filter_and_decimate,
+    filter_and_decimate_stages,
+    format_filter_report,
+    measure_filter_response,
     normalize_signal,
     frequency_mixing,
     decimate_iir,
-    decimate_fir
+    decimate_fir,
+    integer_decimation_factor,
+    validate_filter_response,
 )
 
-ddc = digital_down_converter
+from .orbcomm.orbcomm_ddc import (
+    downconvert_orbcomm_voltage,
+    make_orbcomm_decimation_stages,
+)
 
-from .cr import (
+ddc = downconvert_orbcomm_voltage
+
+from .orbcomm.cr import (
     v4_freq_offset_estimator,
     carrier_error_recovery    
 )
@@ -18,14 +32,14 @@ from .cr import (
 cr = carrier_error_recovery
 
 
-from .rrc import (
+from .orbcomm.rrc import (
     rrcosfilter,
     apply_rrc_match_filter
 )
 
 rrc = apply_rrc_match_filter
 
-from .timing_recovery import (
+from .orbcomm.timing_recovery import (
     symbol_timing_recovery,
     farrow_interpolator,
     gardner_ted,
@@ -33,43 +47,54 @@ from .timing_recovery import (
 )
 
 
-from .costas import (
+from .orbcomm.costas import (
     costas_phase_recovery,
     four_quadrant_detector
 )
 
 costas = costas_phase_recovery
 
-from .decode import differential_decode
+from .orbcomm.decode import differential_decode
 
 decode = differential_decode
 
-from .packet_utils import(
+from .orbcomm.packet_utils import(
     OrbcommPacketType,
     find_packet_start,
     bits_to_packets
 )
 
-from .fletcher_ecc_save import (
+from .orbcomm.fletcher_ecc_save import (
     fletcher_checksum,
     single_bit_fix,
     validate_packet
 )
 
-from .plotting import (
+from .orbcomm.plotting import (
     plot_constellation,
     plot_eye_diagram
 )
 
 
-from .pipeline import orbdemod
+from .orbcomm.pipeline import orbdemod
 
 __version__ = "0.1.0"
 
 __all__ = [
     "enable_logging",
 
-    "digital_down_converter",
+    "downconvert_orbcomm_voltage",
+    "DecimationStageConfig",
+    "FilterResponseReport",
+    "design_butterworth_lowpass",
+    "design_kaiser_lowpass",
+    "filter_and_decimate",
+    "filter_and_decimate_stages",
+    "format_filter_report",
+    "make_orbcomm_decimation_stages",
+    "measure_filter_response",
+    "integer_decimation_factor",
+    "validate_filter_response",
     "ddc",
     "normalize_signal",
     "frequency_mixing",
