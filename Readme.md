@@ -1,10 +1,14 @@
 # LFdemod
-[![DOI](https://zenodo.org/badge/1130552672.svg)](https://doi.org/10.5281/zenodo.18214211)
+
+Current development version: `0.2.0.dev0`
+
+[Archived ORBCOMM v0.1.0 release DOI](https://doi.org/10.5281/zenodo.18214211)
 
 **LFdemod** is a Python toolkit for offline demodulation and diagnostic
 processing of low-frequency raw-voltage data. It began as an **ORBCOMM**
 satellite downlink demodulator for **21CMA (21 Centimeter Array)** recordings
-and is being extended with a broadcast-FM processing path.
+and now provides reusable processing paths for ORBCOMM, broadcast FM,
+airband AM voice, and the observed Starlink VHF LoRa profile.
 
 The project name is written `LFdemod`. Its terminal command and new public
 Python package are both lowercase: `lfdemod`. The historical `orbdemod`
@@ -35,14 +39,14 @@ pip install orbdemod
 You can install the package directly from GitHub using:
 
 ```bash
-pip install git+https://github.com/JinYi1108/Orbcomm_Demodulator.git
+pip install git+https://github.com/JinYi1108/LFdemod.git
 ```
 
 #### From Source (For Development)
 For development and debugging, an editable installation is recommended:
 ```bash
-git clone https://github.com/JinYi1108/Orbcomm_Demodulator.git
-cd Orbcomm_Demodulator
+git clone https://github.com/JinYi1108/LFdemod.git
+cd LFdemod
 pip install -e .
 ```
 
@@ -138,12 +142,12 @@ two-pass response rather than a single forward pass.
 
 ---
 
-## Experimental broadcast-FM PSD path
+## Broadcast-FM PSD path
 
 For a parameter-by-parameter explanation, automatic output naming rules, and
 Python API examples, see [FM 功能使用说明](docs/FM使用说明.md).
 
-The `fm-dev` branch contains an offline, deliberately shallow FM path:
+The main branch contains an offline, deliberately shallow FM path:
 
 ```text
 480 MS/s int16 real voltage

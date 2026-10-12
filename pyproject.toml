@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "LFdemod"
-version = "0.1.0"
+version = "0.2.0.dev0"
 description = "Low-frequency radio demodulation and diagnostic processing from raw voltage data"
 authors = [{name = "Yanbin Yang", email = "yangyanbin@shao.ac.cn"}]
 readme = "Readme.md"
@@ -36,7 +36,8 @@ where = ["src"]
 testpaths = ["tests"]
 
 [project.urls]
-"Homepage" = "https://github.com/JinYi1108/Orbcomm_Demodulator"
+"Homepage" = "https://github.com/JinYi1108/LFdemod"
+"Source" = "https://github.com/JinYi1108/LFdemod"
 "Data" = "https://zenodo.org/records/18213739"
-"Software-DOI" = "https://doi.org/10.5281/zenodo.18214211"
+"Legacy-ORBCOMM-Software-DOI" = "https://doi.org/10.5281/zenodo.18214211"
 "Legacy-PyPI" = "https://pypi.org/project/orbdemod/"

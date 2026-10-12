@@ -4,8 +4,7 @@ authors:
 - family-names: "Yang"
   given-names: "Yanbin"
   orcid: "https://orcid.org/0009-0001-1324-4894"
-title: "Orbcomm_Demodulator: A Python pipeline for demodulating ORBCOMM downlink signals"
-version: 0.1.0
-doi: "10.5281/zenodo.18214211"
-date-released: 2026-01-11
-url: "https://github.com/JinYi1108/Orbcomm_Demodulator"
+title: "LFdemod: Low-frequency radio demodulation and diagnostic processing"
+version: 0.2.0.dev0
+url: "https://github.com/JinYi1108/LFdemod"
+repository-code: "https://github.com/JinYi1108/LFdemod"
