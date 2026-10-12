@@ -145,7 +145,8 @@ two-pass response rather than a single forward pass.
 ## Broadcast-FM PSD path
 
 For a parameter-by-parameter explanation, automatic output naming rules, and
-Python API examples, see [FM 功能使用说明](docs/FM使用说明.md).
+Python API examples, see the [FM User Guide](docs/FM_User_Guide.md) or its
+[Chinese version](docs/FM使用说明.md).
 
 The main branch contains an offline, deliberately shallow FM path:
 
@@ -235,8 +236,12 @@ wrapper and accepts the same FM options. New usage should prefer `lfdemod fm`.
 
 ## Starlink-profile VHF LoRa decoding
 
-For the complete parameter and output description, see
-[Starlink VHF 使用说明](docs/StarlinkVHF使用说明.md).
+For the complete parameter and output description, see the
+[Starlink VHF User Guide](docs/StarlinkVHF_User_Guide.md) or its
+[Chinese version](docs/StarlinkVHF使用说明.md). The two raw-voltage validation
+events are documented separately in
+[Starlink VHF TT&C Validation Data](raw_data/StarlinkVHF_TTC_Data.md); their
+Zenodo link will be added after publication.
 
 Install the optional LoRa physical-layer dependency when this decoder is
 needed; FM, ORBCOMM, and airband AM do not require it:
