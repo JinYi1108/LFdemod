@@ -20,8 +20,12 @@ The raw data used to validate the 81-byte profile are described in
 
 ## Installation
 
-The LoRa backend is an optional dependency. FM, airband AM, and ORBCOMM do not
-require it:
+This decoder uses
+[`lora-phy==0.3.0`](https://pypi.org/project/lora-phy/0.3.0/) as its underlying
+LoRa physical-layer decoding backend. LFdemod supplies the raw-voltage DDC,
+channel conditioning, Starlink-profile configuration, frame interpretation,
+and diagnostic outputs around that backend. The dependency is optional: FM,
+airband AM, and ORBCOMM do not require it.
 
 ```bash
 cd /path/to/LFdemod

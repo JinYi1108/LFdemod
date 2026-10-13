@@ -15,7 +15,11 @@
 
 ## 安装
 
-LoRa 后端是可选依赖；不使用本功能时不会影响 FM、航空 AM 和 ORBCOMM：
+本解调功能使用
+[`lora-phy==0.3.0`](https://pypi.org/project/lora-phy/0.3.0/) 作为底层 LoRa
+物理层解调后端。LFdemod 在该后端之上完成原始电压 DDC、信道处理、
+Starlink profile 配置、帧内容解析和诊断结果输出。该后端是可选依赖；
+不使用本功能时不会影响 FM、航空 AM 和 ORBCOMM。
 
 ```bash
 cd /home/yxp/LFdemod

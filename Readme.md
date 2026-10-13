@@ -243,8 +243,12 @@ events are documented separately in
 [Starlink VHF TT&C Validation Data](raw_data/StarlinkVHF_TTC_Data.md); their
 Zenodo link will be added after publication.
 
-Install the optional LoRa physical-layer dependency when this decoder is
-needed; FM, ORBCOMM, and airband AM do not require it:
+The Starlink VHF path uses
+[`lora-phy==0.3.0`](https://pypi.org/project/lora-phy/0.3.0/) as its underlying
+LoRa physical-layer decoding backend. LFdemod supplies the raw-voltage DDC,
+channel conditioning, Starlink-profile configuration, frame interpretation,
+and diagnostic outputs around that backend. This dependency is optional; FM,
+ORBCOMM, and airband AM do not require it:
 
 ```bash
 python -m pip install -e '.[starlink-vhf]'
